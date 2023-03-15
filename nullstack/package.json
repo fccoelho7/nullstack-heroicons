@@ -1,0 +1,71 @@
+{
+  "name": "nullstack-heroicons",
+  "license": "MIT",
+  "author": {
+    "name": "Fabio Coelho",
+    "email": "fccoelho7@gmail.com"
+  },
+  "version": "0.0.2",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/fccoelho7/nullstack-heroicons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fccoelho7/nullstack-heroicons.git"
+  },
+  "files": [
+    "20",
+    "24"
+  ],
+  "sideEffects": false,
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    "./20/solid": {
+      "types": "./20/solid/index.d.ts",
+      "default": "./20/solid/index.js"
+    },
+    "./20/solid/*": {
+      "types": "./20/solid/*.d.ts",
+      "default": "./20/solid/*.njs"
+    },
+    "./20/solid/*.njs": {
+      "types": "./20/solid/*.d.ts",
+      "default": "./20/solid/*.njs"
+    },
+    "./24/outline": {
+      "types": "./24/outline/index.d.ts",
+      "default": "./24/outline/index.js"
+    },
+    "./24/outline/*": {
+      "types": "./24/outline/*.d.ts",
+      "default": "./24/outline/*.njs"
+    },
+    "./24/outline/*.njs": {
+      "types": "./24/outline/*.d.ts",
+      "default": "./24/outline/*.njs"
+    },
+    "./24/solid": {
+      "types": "./24/solid/index.d.ts",
+      "default": "./24/solid/index.js"
+    },
+    "./24/solid/*": {
+      "types": "./24/solid/*.d.ts",
+      "default": "./24/solid/*.njs"
+    },
+    "./24/solid/*.njs": {
+      "types": "./24/solid/*.d.ts",
+      "default": "./24/solid/*.njs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "nullstack": ">= 16"
+  },
+  "devDependencies": {
+    "nullstack": "^0.17.4"
+  }
+}
