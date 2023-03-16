@@ -39,16 +39,16 @@ Both icon styles are preconfigured to be stylable by setting the `color` CSS pro
 
 ## Nullstack
 
-First, install `@heroicons/nullstack` from npm:
+First, install `nullstack-heroicons` from npm:
 
 ```sh
-npm install @heroicons/nullstack
+npm install nullstack-heroicons
 ```
 
 Now each icon can be imported individually as a Nullstack component:
 
 ```js
-import { BeakerIcon } from '@heroicons/nullstack/24/solid'
+import { BeakerIcon } from 'nullstack-heroicons/24/solid'
 
 function MyComponent() {
   return (
@@ -60,7 +60,7 @@ function MyComponent() {
 }
 ```
 
-The 24x24 outline icons can be imported from `@heroicons/nullstack/24/outline`, the 24x24 solid icons can be imported from `@heroicons/nullstack/24/solid`, and the 20x20 solid icons can be imported from `@heroicons/nullstack/20/solid`.
+The 24x24 outline icons can be imported from `nullstack-heroicons/24/outline`, the 24x24 solid icons can be imported from `nullstack-heroicons/24/solid`, and the 20x20 solid icons can be imported from `nullstack-heroicons/20/solid`.
 
 Icons use an upper camel case naming convention and are always suffixed with the word `Icon`.
 
