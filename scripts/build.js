@@ -68,7 +68,7 @@ async function ensureWriteJson(file, json) {
 }
 
 async function buildIcons(style) {
-  let outDir = `./nullstack/${style}`
+  let outDir = `./icons/${style}`
   let icons = await getIcons(style)
 
   await Promise.all(
@@ -92,23 +92,21 @@ async function buildIcons(style) {
  */
 async function buildExports(styles) {
   let pkg = {}
-
-  // For those that want to read the version from package.json
-  pkg[`./package.json`] = { default: './package.json' }
+  let outDir = `./icons`
 
   // Explicit exports for each style:
   for (let style of styles) {
     pkg[`./${style}`] = {
-      types: `./${style}/index.d.ts`,
-      default: `./${style}/index.js`,
+      types: `${outDir}/${style}/index.d.ts`,
+      default: `${outDir}/${style}/index.js`,
     }
     pkg[`./${style}/*`] = {
-      types: `./${style}/*.d.ts`,
-      default: `./${style}/*.njs`,
+      types: `${outDir}/${style}/*.d.ts`,
+      default: `${outDir}/${style}/*.njs`,
     }
     pkg[`./${style}/*.njs`] = {
-      types: `./${style}/*.d.ts`,
-      default: `./${style}/*.njs`,
+      types: `${outDir}/${style}/*.d.ts`,
+      default: `${outDir}/${style}/*.njs`,
     }
   }
 
@@ -116,30 +114,21 @@ async function buildExports(styles) {
 }
 
 async function main() {
-  const esmPackageJson = { type: 'module', sideEffects: false }
-
   console.log(`Building Nullstack package...`)
 
   await Promise.all([
-    rimraf(`./nullstack/20/solid/*`),
-    rimraf(`./nullstack/24/outline/*`),
-    rimraf(`./nullstack/24/solid/*`),
+    rimraf(`./icons/20/solid/*`),
+    rimraf(`./icons/24/outline/*`),
+    rimraf(`./icons/24/solid/*`),
   ])
 
-  await Promise.all([
-    buildIcons('20/solid'),
-    buildIcons('24/outline'),
-    buildIcons('24/solid'),
-    ensureWriteJson(`./nullstack/20/solid/package.json`, esmPackageJson),
-    ensureWriteJson(`./nullstack/24/outline/package.json`, esmPackageJson),
-    ensureWriteJson(`./nullstack/24/solid/package.json`, esmPackageJson),
-  ])
+  await Promise.all([buildIcons('20/solid'), buildIcons('24/outline'), buildIcons('24/solid')])
 
-  let packageJson = JSON.parse(await fs.readFile(`./nullstack/package.json`, 'utf8'))
+  let packageJson = JSON.parse(await fs.readFile(`./package.json`, 'utf8'))
 
   packageJson.exports = await buildExports(['20/solid', '24/outline', '24/solid'])
 
-  await ensureWriteJson(`./nullstack/package.json`, packageJson)
+  await ensureWriteJson(`./package.json`, packageJson)
 
   return console.log(`Finished building Nullstack package.`)
 }
