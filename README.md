@@ -8,36 +8,14 @@
 </p>
 
 <p align="center">
-  Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. <br>Available as basic SVG icons and via third-party <a href="#nullstack">Nullstack</a> library.
+  Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. <br>Available as basic SVG icons and via third-party <a href="https://nullstack.app/" target="_blank">Nullstack</a> library.
 <p>
 
 <p align="center">
   <a href="https://heroicons.com"><strong>Browse at Heroicons.com &rarr;</strong></a>
 </p>
 
-## Basic Usage
-
-The quickest way to use these icons is to simply copy the source for the icon you need from [heroicons.com](https://heroicons.com) and inline it directly into your HTML:
-
-```html
-<svg
-  class="h-6 w-6 text-gray-500"
-  fill="none"
-  viewBox="0 0 24 24"
-  stroke="currentColor"
-  stroke-width="2"
->
-  <path
-    stroke-linecap="round"
-    stroke-linejoin="round"
-    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-  />
-</svg>
-```
-
-Both icon styles are preconfigured to be stylable by setting the `color` CSS property, either manually or using utility classes like `text-gray-500` in a framework like [Tailwind CSS](https://tailwindcss.com).
-
-## Nullstack
+## Usage
 
 First, install `nullstack-heroicons` from npm:
 
