@@ -1,10 +1,22 @@
 {
   "name": "nullstack-heroicons",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "license": "MIT",
+  "author": {
+    "name": "Fabio Coelho",
+    "email": "fccoelho7@gmail.com"
+  },
+  "keywords": [
+    "nullstack",
+    "heroicons"
+  ],
+  "homepage": "https://github.com/fccoelho7/nullstack-heroicons#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fccoelho7/nullstack-heroicons.git"
+  },
   "files": [
-    "20/",
-    "24/",
+    "icons/",
     "README.md"
   ],
   "scripts": {
