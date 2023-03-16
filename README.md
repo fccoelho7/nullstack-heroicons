@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. <br>Available as basic SVG icons and via first-party <a href="#nullstack">Nullstack</a> library.
+  Beautiful hand-crafted SVG icons, by the makers of Tailwind CSS. <br>Available as basic SVG icons and via third-party <a href="#nullstack">Nullstack</a> library.
 <p>
 
 <p align="center">
